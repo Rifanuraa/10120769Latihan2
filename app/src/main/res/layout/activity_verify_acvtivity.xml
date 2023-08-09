@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyAcvtivity"
+    android:background="@color/lightblue">
+
+    <TextView
+        android:id="@+id/almost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almost There"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="35sp"
+        android:layout_marginTop="350dp"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_below="@id/almost"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/verifyDesc"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:layout_below="@id/desc"
+        android:id="@+id/btnverify"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="VERIFY"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_centerHorizontal="true"
+        app:strokeColor="@color/white"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>

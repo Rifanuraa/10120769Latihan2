@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+/*<!--Tanggal pengerjaan : 30/04/2023
+    Nim : 10120769
+    Nama : Rifa Nur Anisa
+    Kelas : IF-9 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CodeverifyActivity"
+    android:background="@color/lightblue">
+
+    <TextView
+        android:id="@+id/verify_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify your Account"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="35sp"
+        android:layout_marginTop="250dp"/>
+
+    <TextView
+        android:layout_below="@id/verify_title"
+        android:id="@+id/verify_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="We have send Verificaton to your email"
+        android:textColorHint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_below="@id/verify_desc"
+        android:id="@+id/verify_code"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="enter verification code here..."
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        />
+
+    <Button
+        android:layout_below="@id/verify_code"
+        android:id="@+id/btnsend"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="SEND"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_centerHorizontal="true"
+        app:strokeColor="@color/white"
+        android:textColor="@color/white"
+        android:layout_margin="15dp"
+        android:textStyle="bold"
+        />
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/btnsend"
+
+      >
+
+
+    <TextView
+        android:layout_below="@id/buttonFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="doesn't get the code ?"
+        android:textColor="@color/white"
+        android:layout_marginLeft="105dp"
+        android:id="@+id/txt1"
+        />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/register1"
+          style="@style/Widget.Material3.Button.TextButton"
+          android:layout_width="75dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/buttonFB"
+          android:text="Resend"
+          android:textColor="@color/white"
+          android:textStyle="bold" />
+
+  </LinearLayout>
+
+
+
+</RelativeLayout>

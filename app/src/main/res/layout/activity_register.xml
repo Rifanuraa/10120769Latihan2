@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerActivity">
+
+<!-- header -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_header"
+        android:scaleType="fitXY"
+        android:id="@+id/header"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_header_back"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="13dp"/>
+
+    </LinearLayout>
+
+<!--field-->
+
+        <EditText
+            android:layout_below="@id/header"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/usernameRgs"/>
+
+    <EditText
+            android:layout_below="@id/usernameRgs"
+            android:id="@+id/emailRgs"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+        />
+
+
+    <EditText
+            android:layout_below="@id/emailRgs"
+            android:id="@+id/PnumberRgs"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+      />
+<!--radio button (gender) -->
+    <LinearLayout
+        android:layout_below="@id/PnumberRgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/gender"
+        >
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Male"
+
+
+        />
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Female"
+        android:layout_marginLeft="120dp"
+
+            />
+
+    </LinearLayout>
+
+<!--dropdown blood type & rhesus-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/gender"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/dropdown_menu"
+        >
+
+        <Spinner
+            android:id="@+id/spinnerBT"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:entries="@array/BloodType"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/spinnerRH"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="80dp"
+            android:entries="@array/Reshus"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/dropdown_menu"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:id="@+id/passwordRgs"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordRgs"
+        android:id="@+id/Retype"
+        android:inputType="textPassword"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:hint="Retype Password"/>
+
+    <LinearLayout
+        android:layout_below="@id/Retype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/asal"
+        >
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Personal"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Organization"
+            android:layout_marginLeft="94dp"
+
+            />
+
+    </LinearLayout>
+<!--JOB/Adress/location-->
+    <Spinner
+        android:layout_below="@id/asal"
+        android:id="@+id/spinnerjob"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        android:layout_marginLeft="30dp"
+        android:entries="@array/Jobs"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <EditText
+         android:layout_below="@id/spinnerjob"
+         android:id="@+id/Adress"
+         android:layout_width="350dp"
+         android:layout_height="50dp"
+         android:layout_marginLeft="30dp"
+         android:hint="Home Adress"
+         android:layout_marginTop="5dp"
+        />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/Adress"
+        android:id="@+id/location"
+        android:layout_marginLeft="30dp"
+        android:hint="Default Location"
+        android:layout_marginTop="5dp"
+
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Adress"
+        android:src="@drawable/ic_blood_needed_location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:hint="Agree with Terms and Condition" />
+
+    <Button
+        android:id="@+id/register2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="REGISTER"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/lightblue"
+
+       />
+
+
+
+</RelativeLayout>
